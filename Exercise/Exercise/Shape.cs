@@ -8,7 +8,8 @@ namespace Exercise
 {
     interface Shape
     {
-        float Perimeter();
+        void Perimeter();
+        void Info();
     }
 
     class Rectangle : Shape
@@ -21,9 +22,15 @@ namespace Exercise
             this.a = a;
             this.b = b;
         }
-        public float Perimeter()
+
+        public void Info()
         {
-            return (a + b) * 2;
+            Console.WriteLine(string.Format("Rectangle({0}, {1})",a,b));
+        }
+
+        public void Perimeter()
+        {
+            Console.WriteLine("Perimeter Rectangle: " + ((a + b) * 2));
         }
     }
 
@@ -35,9 +42,14 @@ namespace Exercise
             this.a = a;
         }
 
-        public float Perimeter()
+        public void Perimeter()
         {
-            return a * 4;
+            Console.WriteLine("Perimeter Square: " + (a*4));
+        }
+
+        public void Info()
+        {
+            Console.WriteLine(string.Format("Square({0})", a));
         }
     }
 
@@ -52,9 +64,14 @@ namespace Exercise
             this.b = b;
             this.c = c;
         }
-        public float Perimeter()
+        public void Perimeter()
         {
-            return a + b + c;
+            Console.WriteLine("Perimeter Triangle: " + (a+b+c));
+        }
+
+        public void Info()
+        {
+            Console.WriteLine(string.Format("Triangle({0}, {1}, {2})", a, b, c));
         }
     }
 
@@ -66,9 +83,14 @@ namespace Exercise
             this.a = a;
         }
 
-        public float Perimeter()
+        public void Perimeter()
         {
-            return a * 2 * 3.14f;
+            Console.WriteLine("Perimeter Circle: " + (a * 2 * 3.14f));
+        }
+
+        public void Info()
+        {
+            Console.WriteLine(string.Format("Circle({0})", a));
         }
     }
 }
