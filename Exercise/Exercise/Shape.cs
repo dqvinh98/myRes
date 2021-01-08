@@ -8,8 +8,9 @@ namespace Exercise
 {
     public interface IShape
     {
-        void calPerimeter();
-        void showInfo();
+        void ShowInfo();
+        float CalculationPerimeter();
+        string GetShapeType();
     }
 
     public class Rectangle : IShape
@@ -23,14 +24,19 @@ namespace Exercise
             this.b = b;
         }
 
-        public void showInfo()
+        public void ShowInfo()
         {
-            Console.WriteLine(string.Format("Rectangle({0}, {1})",a,b));
+            Console.WriteLine(string.Format("Rectangle({0}, {1})", a, b));
         }
 
-        public void calPerimeter()
+        public float CalculationPerimeter()
         {
-            Console.WriteLine("Perimeter Rectangle: " + ((a + b) * 2));
+            return (a + b) * 2;
+        }
+
+        public string GetShapeType()
+        {
+            return "Rectangle";
         }
     }
 
@@ -42,14 +48,19 @@ namespace Exercise
             this.a = a;
         }
 
-        public void calPerimeter()
+        public float CalculationPerimeter()
         {
-            Console.WriteLine("Perimeter Square: " + (a*4));
+            return a * 4;
         }
 
-        public void showInfo()
+        public void ShowInfo()
         {
             Console.WriteLine(string.Format("Square({0})", a));
+        }
+
+        public string GetShapeType()
+        {
+            return "Square";
         }
     }
 
@@ -64,14 +75,20 @@ namespace Exercise
             this.b = b;
             this.c = c;
         }
-        public void calPerimeter()
+        
+        public float CalculationPerimeter()
         {
-            Console.WriteLine("Perimeter Triangle: " + (a+b+c));
+            return a + b + c;
         }
 
-        public void showInfo()
+        public void ShowInfo()
         {
             Console.WriteLine(string.Format("Triangle({0}, {1}, {2})", a, b, c));
+        }
+
+        public string GetShapeType()
+        {
+            return "Triangle";
         }
     }
 
@@ -83,14 +100,19 @@ namespace Exercise
             this.a = a;
         }
 
-        public void calPerimeter()
+        public float CalculationPerimeter()
         {
-            Console.WriteLine("Perimeter Circle: " + (a * 2 * 3.14f));
+            return a * 2 * 3.14f;
         }
 
-        public void showInfo()
+        public void ShowInfo()
         {
             Console.WriteLine(string.Format("Circle({0})", a));
+        }
+
+        public string GetShapeType()
+        {
+            return "Circle";
         }
     }
 }
