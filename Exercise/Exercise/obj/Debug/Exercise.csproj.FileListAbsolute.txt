@@ -1,0 +1,7 @@
+E:\workp\myRes\Exercise\Exercise\bin\Debug\Exercise.exe.config
+E:\workp\myRes\Exercise\Exercise\bin\Debug\Exercise.exe
+E:\workp\myRes\Exercise\Exercise\bin\Debug\Exercise.pdb
+E:\workp\myRes\Exercise\Exercise\obj\Debug\Exercise.csprojAssemblyReference.cache
+E:\workp\myRes\Exercise\Exercise\obj\Debug\Exercise.csproj.CoreCompileInputs.cache
+E:\workp\myRes\Exercise\Exercise\obj\Debug\Exercise.exe
+E:\workp\myRes\Exercise\Exercise\obj\Debug\Exercise.pdb
