@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Exercise
 {
-    interface IShape
+    public interface IShape
     {
-        void Perimeter();
-        void Info();
+        void calPerimeter();
+        void showInfo();
     }
 
-    class Rectangle : IShape
+    public class Rectangle : IShape
     {
         private float a;
         private float b;
@@ -23,18 +23,18 @@ namespace Exercise
             this.b = b;
         }
 
-        public void Info()
+        public void showInfo()
         {
             Console.WriteLine(string.Format("Rectangle({0}, {1})",a,b));
         }
 
-        public void Perimeter()
+        public void calPerimeter()
         {
             Console.WriteLine("Perimeter Rectangle: " + ((a + b) * 2));
         }
     }
 
-    class Square: IShape
+    public class Square: IShape
     {
         private float a;
         public Square(float a)
@@ -42,18 +42,18 @@ namespace Exercise
             this.a = a;
         }
 
-        public void Perimeter()
+        public void calPerimeter()
         {
             Console.WriteLine("Perimeter Square: " + (a*4));
         }
 
-        public void Info()
+        public void showInfo()
         {
             Console.WriteLine(string.Format("Square({0})", a));
         }
     }
 
-    class Triangle : IShape
+    public class Triangle : IShape
     {
         private float a;
         private float b;
@@ -64,18 +64,18 @@ namespace Exercise
             this.b = b;
             this.c = c;
         }
-        public void Perimeter()
+        public void calPerimeter()
         {
             Console.WriteLine("Perimeter Triangle: " + (a+b+c));
         }
 
-        public void Info()
+        public void showInfo()
         {
             Console.WriteLine(string.Format("Triangle({0}, {1}, {2})", a, b, c));
         }
     }
 
-    class Circle : IShape
+    public class Circle : IShape
     {
         private float a;
         public Circle(float a)
@@ -83,12 +83,12 @@ namespace Exercise
             this.a = a;
         }
 
-        public void Perimeter()
+        public void calPerimeter()
         {
             Console.WriteLine("Perimeter Circle: " + (a * 2 * 3.14f));
         }
 
-        public void Info()
+        public void showInfo()
         {
             Console.WriteLine(string.Format("Circle({0})", a));
         }

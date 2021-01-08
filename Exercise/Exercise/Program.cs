@@ -22,8 +22,8 @@ namespace Exercise
 
             for (var i=0; i<shapes.Count; i++)
             {
-                shapes[i].Info();
-                shapes[i].Perimeter();
+                shapes[i].showInfo();
+                shapes[i].calPerimeter();
             }
             Console.ReadKey();
         }
