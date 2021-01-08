@@ -10,7 +10,7 @@ namespace Exercise
     {
         static void Main(string[] args)
         {
-            List<Shape> shapes = new List<Shape>();
+            List<IShape> shapes = new List<IShape>();
             shapes.Add(new Rectangle(12, 20));
             shapes.Add(new Rectangle(15, 16));
             shapes.Add(new Square(50));
@@ -19,6 +19,7 @@ namespace Exercise
             shapes.Add(new Triangle(15, 19, 26));
             shapes.Add(new Circle(22));
             shapes.Add(new Circle(10));
+
             for (var i=0; i<shapes.Count; i++)
             {
                 shapes[i].Info();

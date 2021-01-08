@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Exercise
 {
-    interface Shape
+    interface IShape
     {
         void Perimeter();
         void Info();
     }
 
-    class Rectangle : Shape
+    class Rectangle : IShape
     {
         private float a;
         private float b;
@@ -34,7 +34,7 @@ namespace Exercise
         }
     }
 
-    class Square: Shape
+    class Square: IShape
     {
         private float a;
         public Square(float a)
@@ -53,7 +53,7 @@ namespace Exercise
         }
     }
 
-    class Triangle : Shape
+    class Triangle : IShape
     {
         private float a;
         private float b;
@@ -75,7 +75,7 @@ namespace Exercise
         }
     }
 
-    class Circle : Shape
+    class Circle : IShape
     {
         private float a;
         public Circle(float a)
